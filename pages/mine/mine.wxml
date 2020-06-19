@@ -1,0 +1,30 @@
+<!--pages/mine/mine.wxml-->
+<!-- hello world -->
+<!-- hello git -->
+<scroll-view class="scbg" scroll-y="true">
+  <view class="personalInfo">
+    <view class="deco">
+      <open-data class="ava" type="userAvatarUrl"></open-data>
+    </view>
+    <open-data class="nn" type="userNickName"></open-data>
+  </view>
+  <block wx:for="{{showdata}}" wx:for-item="itemName" wx:for-index="id">
+  <view class="box">
+    <view class="secondblock">
+      <text class="content">{{itemName.content}}</text>
+      <view class="time">
+          <text class="showtime">{{itemName.send_timestamp}}</text>
+        </view>
+    </view>
+    <view class="thirdblock">
+      <view class="left">
+        <image class="like" src="/images/like.png" id="{{itemName.id}}"></image>
+        <text class="num" wx:if="{{itemName.total_like != 0}}">{{itemName.total_like}}</text>
+      </view>
+      <view class="del" bindtap="delete_msg" id="{{itemName.id}}">删除</view>
+    </view>
+  </view>
+</block> 
+</scroll-view>
+
+<include src="/pages/bottom_menu/bottom_menu.wxml"/>

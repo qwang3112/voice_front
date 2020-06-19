@@ -1,0 +1,12 @@
+<!--pages/bottom_menu/bottom_menu.wxml-->
+<view class="bottomrow">
+  <view class="bottomtab" bindtap="gotosquare">
+    <text style="color: {{firstcolor}}">广场</text>
+  </view>
+  <view class="centerimg" bindtap="addtreehole">
+    <image src="/images/add.png"></image>
+  </view>
+  <view class="bottomtab" bindtap="gotomine">
+    <text style="color: {{secondcolor}}">我的</text>
+  </view>
+</view>
